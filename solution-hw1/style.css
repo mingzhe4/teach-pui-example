@@ -26,6 +26,21 @@ h3{
     margin-left: auto;  
     margin-right: auto;  
     width:20%;
+    border: black solid 1px;
+}
+
+h2:hover{
+    background-color: yellow; 
+    width: 150px;
+    margin-left: auto;  
+    margin-right: auto;
+}
+
+.cart:hover{
+    background-color: yellow; 
+    width: 70px;
+    margin-left: auto;  
+    margin-right: auto;
 }
 
 a{
@@ -33,11 +48,86 @@ a{
     text-decoration: none;
 }
 
-a:hover{
+
+.box{
+    width:20%;
+    height:auto;
+    text-align: left;
+    margin-left: auto;  
+    margin-right: auto; 
+}
+
+img.products{
+    width: 100%;
+}
+
+.box:hover{
+    border: solid 5px yellow;
     background-color: yellow;
 }
 
-div{
-    margin-left: 475px;
+/* index2 */
+
+.original{
+    margin-left: auto;  
+    margin-right: auto; 
+    text-align: left;
+    width:50%;
+    height:auto;
 }
 
+img#ocr{
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto;  
+    width:100%;
+    border: black solid 2px;
+}
+
+.ad {
+    text-align: left;
+    width:20%;
+    margin-left: auto;  
+    margin-right: auto; 
+}
+
+
+#glazing{
+    text-align: left;
+    width:20%;
+    margin-left: auto;  
+    margin-right: auto; 
+}
+
+.menu1{
+    text-align: left;
+    width:20%;
+    margin-left: auto;  
+    margin-right: auto; 
+}
+
+#pack{
+    text-align: left;
+    width:20%;
+    margin-left: auto;  
+    margin-right: auto; 
+}
+
+.menu2{
+    text-align: left;
+    width:20%;
+    margin-left: auto;  
+    margin-right: auto; 
+}
+
+#add{
+    text-align: left;
+    width:20%;
+    margin-left: auto;  
+    margin-right: auto; 
+}
+
+.atc{
+    border: black solid 1px;
+    padding: 5px
+}
