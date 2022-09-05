@@ -177,29 +177,44 @@ select{
 .products3{
     text-align: left;
     width:10%;
-    margin-left: auto;  
-    margin-right: auto;
-    display: block;  
-    margin-left: auto;  
-    margin-right: auto;  
     border: black solid 2px;
+    float: left;
+    margin-left: 560px;
 }
 
+
 .remove{
-    text-align: center;
+    margin-left: 560px;
 }
 
 .texts{
-    text-align: center;
+    margin-left: 750px;
+
+}
+
+.prices{
+    float: right;
+    margin-right: 100px;
+}
+
+.totals{
+    margin-left: 750px;
+    float: left;
+}
+
+.twentynine{    
+    float: right;
+    margin-right: 100px;
+
 }
 
 .checkout{
     text-align: center;
-    margin-left: auto;  
-    margin-right: auto;
     border: black solid 1px;
     padding: 5px;
     width: 7%;
     background-color: yellow;
+    float: right;
+    margin-right: 100px;
 
 }
