@@ -26,12 +26,6 @@ hr{
     text-align: center;
 }
 
-.productstitleblank:hover{
-    background-color: yellow; 
-    width: 150px;
-    margin-left: auto;  
-    margin-right: auto;
-}
 
 h3{
     text-align: center;
@@ -52,12 +46,7 @@ h3{
 
 }
 
-.cartblank:hover{
-    background-color: yellow; 
-    width: 70px;
-    margin-left: auto;  
-    margin-right: auto;
-}
+
 
 a{
     color: black;
