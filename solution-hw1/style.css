@@ -13,30 +13,46 @@ hr{
     background:black;
 }
 
-h2{
+.productstitle{
     text-align: center;
-}
-
-h3{
-    text-align: center;
-}
-
-.products{
-    display: block;  
+    background-color: yellow; 
+    width:150px;
     margin-left: auto;  
-    margin-right: auto;  
-    width:20%;
-    border: black solid 1px;
+    margin-right: auto; 
+    display: block;  
 }
 
-h2:hover{
+.productstitleblank{
+    text-align: center;
+}
+
+.productstitleblank:hover{
     background-color: yellow; 
     width: 150px;
     margin-left: auto;  
     margin-right: auto;
 }
 
-.cart:hover{
+h3{
+    text-align: center;
+
+}
+
+.products{
+    display: block;  
+}
+
+.cart{
+    text-align: center;
+    background-color: yellow; 
+    width:70px;
+    margin-left: auto;  
+    margin-right: auto; 
+    display: block; 
+
+}
+
+.cartblank:hover{
     background-color: yellow; 
     width: 70px;
     margin-left: auto;  
@@ -129,12 +145,10 @@ img#ocr{
 
 .atc{
     border: black solid 1px;
-    padding: 5px
-}
-
-.atc:hover{
+    padding: 5px;
     background-color: yellow;
 }
+
 
 select{
     width:100%;
@@ -168,9 +182,6 @@ select{
     border: black solid 1px;
     padding: 5px;
     width: 7%;
-
-}
-
-.checkout:hover{
     background-color: yellow;
+
 }
