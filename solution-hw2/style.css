@@ -36,9 +36,6 @@ h3{
     display: block;  
 }
 
-img.products{
-    border: black solid 1px;
-}
 
 .cart{
     text-align: center;
@@ -68,6 +65,7 @@ a{
 
 img.products{
     width: 100%;
+    border: black solid 1px;
 }
 
 .box:hover{
