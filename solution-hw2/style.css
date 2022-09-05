@@ -65,7 +65,7 @@ a{
 
 img.products{
     width: 100%;
-    border: black solid 1px;
+    border: black solid 2px;
 }
 
 .box:hover{
@@ -78,7 +78,13 @@ img.products{
     float: left;
     width: 32%;
     padding: 5px;
-  }
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
 /* index2 */
 
