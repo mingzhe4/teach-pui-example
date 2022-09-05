@@ -1,0 +1,176 @@
+body{
+    font-family: Arial;
+}
+
+.logo{
+    width:40%;
+    margin:50px;
+}
+    
+hr{
+    width:1100px;
+    height:2px;
+    background:black;
+}
+
+.productstitle{
+    text-align: center;
+    background-color: yellow; 
+    width:150px;
+    margin-left: auto;  
+    margin-right: auto; 
+    display: block;  
+}
+
+.productstitleblank{
+    text-align: center;
+}
+
+
+h3{
+    text-align: center;
+
+}
+
+.products{
+    display: block;  
+}
+
+.cart{
+    text-align: center;
+    background-color: yellow; 
+    width:70px;
+    margin-left: auto;  
+    margin-right: auto; 
+    display: block; 
+
+}
+
+
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+
+.box{
+    width:20%;
+    height:auto;
+    text-align: left;
+    margin-left: auto;  
+    margin-right: auto; 
+}
+
+img.products{
+    width: 100%;
+}
+
+.box:hover{
+    border: solid 5px yellow;
+    background-color: yellow;
+}
+
+/* index2 */
+
+.original{
+    margin-left: auto;  
+    margin-right: auto; 
+    text-align: left;
+    width:50%;
+    height:auto;
+}
+
+img#ocr{
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto;  
+    width:100%;
+    border: black solid 2px;
+}
+
+.ad {
+    text-align: left;
+    width:20%;
+    margin-left: auto;  
+    margin-right: auto; 
+}
+
+
+#glazing{
+    text-align: left;
+    width:20%;
+    margin-left: auto;  
+    margin-right: auto; 
+}
+
+.menu1{
+    text-align: left;
+    width:20%;
+    margin-left: auto;  
+    margin-right: auto; 
+}
+
+#pack{
+    text-align: left;
+    width:20%;
+    margin-left: auto;  
+    margin-right: auto; 
+}
+
+.menu2{
+    text-align: left;
+    width:20%;
+    margin-left: auto;  
+    margin-right: auto; 
+}
+
+.add{
+    text-align: left;
+    width:20%;
+    margin-left: auto;  
+    margin-right: auto;
+}
+
+.atc{
+    border: black solid 1px;
+    padding: 5px;
+    background-color: yellow;
+}
+
+
+select{
+    width:100%;
+    height: 30px;
+}
+
+/* index3 */
+.products3{
+    text-align: left;
+    width:10%;
+    margin-left: auto;  
+    margin-right: auto;
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto;  
+    border: black solid 2px;
+}
+
+.remove{
+    text-align: center;
+}
+
+.texts{
+    text-align: center;
+}
+
+.checkout{
+    text-align: center;
+    margin-left: auto;  
+    margin-right: auto;
+    border: black solid 1px;
+    padding: 5px;
+    width: 7%;
+    background-color: yellow;
+
+}
