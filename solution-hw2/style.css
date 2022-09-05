@@ -1,25 +1,31 @@
 body{
     font-family: Arial;
+    border: solid 1px black;
 }
 
 .logo{
     width:40%;
-    margin:50px;
+    margin-left:50px;
+    margin-top:50px;
+    float: left;
 }
     
 hr{
-    width:1100px;
+    width:620px;
     height:2px;
     background:black;
+    float: right;
+    margin-bottom: 100px;;
 }
 
 .productstitle{
     text-align: center;
     background-color: yellow; 
     width:150px;
-    margin-left: auto;  
-    margin-right: auto; 
-    display: block;  
+    float:left;
+    margin-left: 250px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .productstitleblank{
@@ -27,27 +33,32 @@ hr{
 }
 
 
-h3{
-    text-align: center;
-
-}
-
 .products{
     display: block;  
 }
 
 
 .cart{
-    text-align: center;
     background-color: yellow; 
     width:70px;
-    margin-left: auto;  
-    margin-right: auto; 
-    display: block; 
+    float: right;
 
 }
 
+.cartblank{
+    float:right;
+    margin-right: 70px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: x-large;
+}
 
+.our{
+    float: left;
+    margin-left:40px;
+    margin-bottom: 50px;
+    font-size: x-large;
+}
 
 a{
     color: black;

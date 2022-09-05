@@ -24,6 +24,7 @@ hr{
 
 .productstitleblank{
     text-align: center;
+    font-size: x-large;
 }
 
 
@@ -47,7 +48,10 @@ h3{
 
 }
 
-
+.cartblank{
+    font-size: x-large;
+    text-align: center;
+}
 
 a{
     color: black;
