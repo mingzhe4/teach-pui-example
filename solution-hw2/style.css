@@ -3,38 +3,64 @@ body{
     border: solid 1px black;
 }
 
-.logo{
-    width:40%;
+.header{
+    display:flex;
+    box-sizing:border-box;
     margin-left:50px;
     margin-top:50px;
-    float: left;
+    gap: 80px;
+    justify-content: flex-end;
 }
+
+.header-left{
+    display: flex;
+}
+
+.logo{
+    width:120%;
+
+}
+
+.header-right{
+    display:flex;
+    flex-direction: column;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
     
 hr{
-    width:620px;
+    width:730px;
     height:2px;
     background:black;
-    float: right;
-    margin-bottom: 100px;;
 }
 
 .productstitle{
+    font-size: x-large;
     text-align: center;
     background-color: yellow; 
     width:150px;
-    float:left;
-    margin-left: 250px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    height:30px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+
+
 }
 
-.productstitleblank{
-    float:left;
-    margin-left: 250px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+.cartblank{
+    font-size: x-large;
+    margin-right:50px;
+}
+
+.our{
+    margin-top: 50px;
+    margin-bottom: 50px;
     font-size: x-large;
 }
+
 
 
 .products{
@@ -42,30 +68,6 @@ hr{
 }
 
 
-.cart{
-    background-color: yellow; 
-    width:70px;
-    float: right;
-    margin-right: 70px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-
-}
-
-.cartblank{
-    float:right;
-    margin-right: 70px;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    font-size: x-large;
-}
-
-.our{
-    float: left;
-    margin-left:40px;
-    margin-bottom: 50px;
-    font-size: x-large;
-}
 
 a{
     color: black;
@@ -75,10 +77,7 @@ a{
 
 .box{
     width:80%;
-    height:auto;
-    text-align: left;
-    margin-left: auto;  
-    margin-right: auto; 
+    margin:30px;
 }
 
 img.products{
@@ -92,25 +91,32 @@ img.products{
 }
 
 
-.column {
-    float: left;
-    width: 32%;
-    padding: 5px;
+.row{
+    display:flex;
+    margin-left:80px;
+    margin-right:80px;
 }
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+
 
 /* index2 */
 
+.container{
+    display: flex;
+    gap:100px;
+    margin:80px;
+}
+
+.container-right{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    font-size: x-large;
+}
+
 .original{
-    float: left;
-    width:50%;
-    height:auto;
-    margin-left: 150px;
+    width:60%;
 }
 
 img#ocr{
@@ -118,52 +124,23 @@ img#ocr{
     border: black solid 2px;
 }
 
-.ad {
+.ad .menu1 .menu2 .add .atc{
     text-align: left;
     width:20%;
-    float:right;
     margin-right: 100px;
 }
 
 
-#glazing{
+#glazing #pack{
     text-align: left;
     width:20%;
-    float:right;
     margin-right: 100px;
 }
 
-.menu1{
-    text-align: left;
-    width:18%;
-    float:right;
-    margin-right: 128px;
-}
-
-#pack{
-    text-align: left;
-    width:20%;
-    float:right;
-    margin-right: 100px;
-}
-
-.menu2{
-    text-align: left;
-    width:18%;
-    float:right;
-    margin-right: 128px;
-}
-
-.add{
-    text-align: left;
-    width:20%;
-    float:right;
-    margin-right: 110px;
-}
 
 .atc{
     border: black solid 1px;
-    padding: 5px;
+    padding: 10px;
     background-color: yellow;
 }
 
@@ -174,47 +151,79 @@ select{
 }
 
 /* index3 */
+
+.productstitleblank{
+    font-size: x-large;
+    margin-right:50px;
+}
+.cart{
+    font-size: x-large;
+    text-align: center;
+    background-color: yellow; 
+    width:75px;
+    height:30px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+
+}
+
+.shopping{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-left: 450px;
+}
+
+
 .products3{
-    text-align: left;
-    width:10%;
+    width:20%;
     border: black solid 2px;
-    float: left;
-    margin-left: 560px;
 }
 
-
-.remove{
-    margin-left: 560px;
+.shopping-display{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 50px;
 }
 
-.texts{
-    margin-left: 750px;
-
+.row-one{
+    display: flex;
 }
+
+.image-texts{
+    display: flex;
+    gap:50px;
+}
+
 
 .prices{
-    float: right;
-    margin-right: 100px;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
 }
 
-.totals{
-    margin-left: 750px;
-    float: left;
+
+.three-texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.twentynine{    
-    float: right;
-    margin-right: 100px;
-
+.final{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    gap:415px;
 }
 
 .checkout{
     text-align: center;
     border: black solid 1px;
     padding: 5px;
-    width: 7%;
+    width: 10%;
     background-color: yellow;
-    float: right;
-    margin-right: 100px;
-
+    margin-bottom: 50px;
+    margin-right: 50px;
 }
