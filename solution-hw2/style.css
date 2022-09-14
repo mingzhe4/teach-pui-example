@@ -10,6 +10,7 @@ body{
     margin-top:50px;
     gap: 80px;
     justify-content: flex-end;
+    flex-basis: 1 0 auto;
 }
 
 .header-left{
@@ -17,7 +18,7 @@ body{
 }
 
 .logo{
-    width:120%;
+    width:120%; 
 
 }
 
