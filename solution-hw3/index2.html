@@ -35,10 +35,10 @@
           Customize our delicious,<br>handmade cinnamon roll to<br>your liking!
         </div>
 
-        <div id="glazing" onchange="glazingChange(this)">Glazing:</div>
+        <div id="glazing">Glazing:</div>
 
         <div class ='menu1'>
-          <select name="flavor" id="flavor">
+          <select id="glazingOptions" onchange="glazingChange(this)">
             <option id="keepOriginal">Keep original</option>
             <option id="sugarMilk">Sugar milk</option>
             <option id="vanillaMilk">Vanilla milk</option>
@@ -49,7 +49,7 @@
     
         <div id="pack">Pack size:</div>
         <div class ='menu2'>
-          <select name="size" id="size">
+          <select id="size">
             <option id="one">1</option>
             <option id="three">3</option>
             <option id="six">6</option>
