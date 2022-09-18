@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>HW 2</title>
+    <title>HW 3</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="js/script.js"></script>
   </head>
   
   <body>
@@ -37,7 +38,7 @@
         <div id="glazing">Glazing:</div>
 
         <div class ='menu1'>
-          <select name="flavor" id="flavor">
+          <select id="glazingOptions" onchange="glazingChange(this)">
             <option>Keep original</option>
             <option>Sugar milk</option>
             <option>Vanilla milk</option>
@@ -47,8 +48,9 @@
 
     
         <div id="pack">Pack size:</div>
+
         <div class ='menu2'>
-          <select name="size" id="size">
+          <select id="size" onchange="sizeChange(this)">
             <option>1</option>
             <option>3</option>
             <option>6</option>
@@ -62,8 +64,8 @@
         <br>
 
         <div class="add">
-          <span id="price">&nbsp;&nbsp;&nbsp;2.49</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <span class="atc"><a href="index3.html">Add to Cart</a></span>
+          <div id="price">$2.49</div>
+          <div class="atc"><a href="index3.html">Add to Cart</a></div>
         </div>
     
       </div>
