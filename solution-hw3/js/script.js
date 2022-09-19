@@ -6,7 +6,7 @@ let addPriceSize = {
     packSize:[1,3,5,10]
 };
 
-let elementGlaze = document.querySelector('#glazingOptions');
+let elementGlaze = document.querySelector('#glazing-options');
 let elementSize = document.querySelector('#size');
 
 for(i=0;i<addPriceGlaze.glazing.length;i++){

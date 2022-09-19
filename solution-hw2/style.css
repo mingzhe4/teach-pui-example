@@ -1,8 +1,12 @@
+/*--------------------OVERALL STYLE--------------------*/
+
+/* style for the entire html body content */
 body{
-    font-family: Arial;
+    font-family: Arial, Helvetica, sans-serif;
     border: solid 1px black;
 }
 
+/* header for all three pages*/
 .header{
     display:flex;
     box-sizing:border-box;
@@ -13,33 +17,55 @@ body{
     flex-basis: 1 0 auto;
 }
 
+/* left side of the header flex box, including image logo */
 .header-left{
     display: flex;
 }
 
+/* image logo */
 .logo{
     width:120%; 
 
 }
 
+/* right side of the header, including navigation, line and page title */
 .header-right{
     display:flex;
     flex-direction: column;
 }
 
+/* navigation bar of the page, including 'product' and 'cart' */
 .header-nav{
     display: flex;
     justify-content: flex-end;
 }
 
-    
+/* the line that divides the navigation and page title */
 hr{
     width:730px;
     height:2px;
     background:black;
 }
 
-.productstitle{
+/* page title of the header */
+.page-title{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: x-large;
+}
+
+/* style for elements with links */
+a{
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/*--------------------INDEX HTML(PRODUCT GALLERY PAGE)--------------------*/
+
+/* 'product' in navigation bar, when it is highlighted */
+.products-title{
     font-size: x-large;
     text-align: center;
     background-color: yellow; 
@@ -47,51 +73,34 @@ hr{
     height:30px;
     margin-right: 50px;
     margin-bottom: 30px;
-
-
 }
 
-.cartblank{
+/* 'cart' in navigation bar, when it is not highlighted */
+.cart-blank{
     font-size: x-large;
     margin-right:50px;
 }
 
-.our{
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: x-large;
-}
-
-
-
+/* images of the products in the gallery page */
 .products{
     display: block;  
-}
-
-
-
-a{
-    color: black;
-    text-decoration: none;
-}
-
-
-.box{
-    width:80%;
-    margin:30px;
-}
-
-img.products{
     width: 100%;
     border: black solid 2px;
 }
 
+/* the block that contains image, product description and price */
+.box{
+    width:80%;
+    margin:20px;
+    padding: 10px;
+}
+
+/* the effects when hovering the box */
 .box:hover{
-    border: solid 5px yellow;
     background-color: yellow;
 }
 
-
+/* the block that contains three boxes in a row */
 .row{
     display:flex;
     margin-left:80px;
@@ -100,46 +109,47 @@ img.products{
 
 
 
-/* index2 */
+/*--------------------PRODUCT DETAIL PAGE--------------------*/
 
+/* the container that contains all body elements in the product detail page (everything except for header) */
 .container{
     display: flex;
     gap:100px;
     margin:80px;
 }
 
+/* right side of the container, contains everything but the image */
 .container-right{
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     gap:30px;
     font-size: x-large;
+    text-align: left;
+    width:30%;
+    margin-right: 5px;
 }
 
+/* the container that contains the original cinnamon roll image */
 .original{
     width:60%;
 }
 
-img#ocr{
+/* the image of original cinnamon roll */
+#original-cinnamon-roll{
     width:100%;
     border: black solid 2px;
 }
 
-.ad .menu1 .menu2 .add .atc{
-    text-align: left;
-    width:20%;
-    margin-right: 100px;
+/* container that contains both the price and the add to cart button */
+.add{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 100px;
 }
 
-
-#glazing #pack{
-    text-align: left;
-    width:20%;
-    margin-right: 100px;
-}
-
-
-.atc{
+/* styles the add to cart button */
+.add-to-cart{
     border: black solid 1px;
     padding: 10px;
     background-color: yellow;
@@ -147,28 +157,27 @@ img#ocr{
     width: 50%;
 }
 
-.add{
-    display: flex;
-    justify-content: flex-end;
-}
-
+/* styles the price */
 #price{
     margin-right:50px;
     margin-top: 10px;;
 }
 
-
+/* styles the options of the select drop down */
 select{
     width:100%;
     height: 30px;
 }
 
-/* index3 */
+/*--------------------SHOPPING CART PAGE--------------------*/
 
-.productstitleblank{
+/* 'product' in navigation bar, when it is not highlighted */
+.products-title-blank{
     font-size: x-large;
     margin-right:50px;
 }
+
+/* 'cart' in navigation bar, when it is highlighted */
 .cart{
     font-size: x-large;
     text-align: center;
@@ -180,6 +189,7 @@ select{
 
 }
 
+/* the container that contains all body elements in the shopping cart page (everything except for header) */
 .shopping{
     display: flex;
     align-items: flex-end;
@@ -187,41 +197,45 @@ select{
     margin-left: 450px;
 }
 
-
-.products3{
+/* images that are shown in the shopping cart page */
+.products-shopping{
     width:20%;
     border: black solid 2px;
 }
 
+/* the container that contains one row of image, text descriptions, remove, and price */
 .shopping-display{
     display:flex;
     flex-direction: column;
     margin-bottom: 50px;
 }
 
+/* the container that contains one row of image, text descriptions, and price */
 .row-one{
     display: flex;
 }
 
+/* the container that contains the image and text descriptions */
 .image-texts{
     display: flex;
     gap:50px;
 }
 
-
+/* price for each row */
 .prices{
     display: flex;
     align-items: center;
     margin-right: 50px;
 }
 
-
+/* the container that contains the three lines of text descriptions */
 .three-texts{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+/* the container that contains the bottom of the page, including total price and check out button */
 .final{
     display: flex;
     justify-content: flex-end;
@@ -231,6 +245,7 @@ select{
     gap:415px;
 }
 
+/* style for the checkout button */
 .checkout{
     text-align: center;
     border: black solid 1px;
