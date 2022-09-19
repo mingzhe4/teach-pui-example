@@ -1,24 +1,24 @@
-const addPrice1 = {
+let addPriceGlaze = {
     glazing:[0,0,0.5,1.5]
 }
 
-const addPrice2 = {
+let addPriceSize = {
     packSize:[1,3,5,10]
 }
 
-const elementGlaze = document.querySelector('#glazingOptions')
-const elementSize = document.querySelector('#size')
+let elementGlaze = document.querySelector('#glazingOptions')
+let elementSize = document.querySelector('#size')
 
-for(i=0;i<4;i++){
-    elementGlaze.options[i].value=addPrice1.glazing[i];
+for(i=0;i<addPriceGlaze.glazing.length;i++){
+    elementGlaze.options[i].value=addPriceGlaze.glazing[i];
 }
 
-for(j=0;j<4;j++){
-    elementSize.options[j].value=addPrice2.packSize[j];
+for(j=0;j<addPriceSize.packSize.length;j++){
+    elementSize.options[j].value=addPriceSize.packSize[j];
 }
 
 function updatePrice(){
-    showPrice  = document.querySelector("#price")
+    let showPrice  = document.querySelector("#price")
     showPrice.textContent = '$'+finalPrice;
 }
 
