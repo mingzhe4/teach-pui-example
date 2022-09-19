@@ -1,27 +1,27 @@
-let addPriceGlaze = {
-    glazing:[0,0,0.5,1.5]
-};
-
-let addPriceSize = {
+/* create an array for price adjustment */
+let addPrice = {
+    glazing:[0,0,0.5,1.5],
     packSize:[1,3,5,10]
 };
 
+/* get the glazing and pack size elements from html */
 let elementGlaze = document.querySelector('#glazing-options');
 let elementSize = document.querySelector('#size');
 
-for(i=0;i<addPriceGlaze.glazing.length;i++){
-    elementGlaze.options[i].value=addPriceGlaze.glazing[i];
+/* loop through the addPrice array for price adjustment accordingly */
+for(i=0;i<addPrice.glazing.length;i++){
+    elementGlaze.options[i].value=addPrice.glazing[i];
+    elementSize.options[i].value=addPrice.packSize[i];
 }
 
-for(j=0;j<addPriceSize.packSize.length;j++){
-    elementSize.options[j].value=addPriceSize.packSize[j];
-}
-
+/*create a function that updates the final price shown in the html page */
 function updatePrice(){
     let showPrice  = document.querySelector("#price");
     showPrice.textContent = '$'+finalPrice;
 }
 
+/*create a function that calculates the value of the final price given glazing option adjustment or pack size adjustment to the hundredth decimal place, 
+include updatePrice() function to reflect the final price on the html page */
 function glazingChange() {
     finalPrice = (Number(Number(elementSize.value)*(Number(2.49+Number(elementGlaze.value))))).toFixed(2);   
     updatePrice();
