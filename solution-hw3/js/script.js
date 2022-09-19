@@ -1,10 +1,10 @@
 let addPriceGlaze = {
     glazing:[0,0,0.5,1.5]
-}
+};
 
 let addPriceSize = {
     packSize:[1,3,5,10]
-}
+};
 
 let elementGlaze = document.querySelector('#glazingOptions');
 let elementSize = document.querySelector('#size');
