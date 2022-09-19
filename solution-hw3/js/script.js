@@ -22,7 +22,7 @@ function updatePrice(){
     showPrice.textContent = '$'+finalPrice;
 }
 
-function glazingChange(){
+function glazingChange() {
     finalPrice = (Number(Number(elementSize.value)*(Number(2.49+Number(elementGlaze.value))))).toFixed(2);   
     updatePrice()
   }
