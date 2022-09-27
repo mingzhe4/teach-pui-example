@@ -1,5 +1,8 @@
 //HW3
 
+/*display the price on the page*/
+let price = 2.49;
+
 /* create arrays that will be shown on the options dropdown*/
 let showOptions = {
     arrayGlaze: ['Keep Original','Sugar milk','Vanilla Milk','Double Chocolate'],
@@ -45,7 +48,7 @@ function glazingChange(element) {
     elementGlazeValue=addPrice.addGlaze[indexGlaze];
 
     /*calculate the final price and display it on the webpage*/
-    finalPrice = ((elementSizeValue)*(price+(elementGlazeValue))).toFixed(2);   
+    finalPrice = ((elementSizeValue)*(updatedPrice+(elementGlazeValue))).toFixed(2);   
     let showPrice = document.querySelector("#price");
     showPrice.textContent = '$'+finalPrice;
 }
@@ -60,7 +63,7 @@ function sizeChange(element) {
     elementSizeValue=addPrice.addSize[indexSize];
 
     /*calculate the final price and display it on the webpage*/
-    finalPrice = ((elementSizeValue)*(price+(elementGlazeValue))).toFixed(2);   
+    finalPrice = ((elementSizeValue)*(updatedPrice+(elementGlazeValue))).toFixed(2);   
     let showPrice = document.querySelector("#price");
     showPrice.textContent = '$'+finalPrice;
 }
@@ -69,16 +72,80 @@ function sizeChange(element) {
 
 //HW4
 
+const rolls = {
+    "Original": {
+        "basePrice": 2.49,
+        "imageFile": "original-cinnamon-roll.jpg"
+    },
+    "Apple": {
+        "basePrice": 3.49,
+        "imageFile": "apple-cinnamon-roll.jpg"
+    },
+    "Raisin": {
+        "basePrice": 2.99,
+        "imageFile": "raisin-cinnamon-roll.jpg"
+    },
+    "Walnut": {
+        "basePrice": 3.49,
+        "imageFile": "walnut-cinnamon-roll.jpg"
+    },
+    "Double-Chocolate": {
+        "basePrice": 3.99,
+        "imageFile": "double-chocolate-cinnamon-roll.jpg"
+    },
+    "Strawberry": {
+        "basePrice": 3.99,
+        "imageFile": "strawberry-cinnamon-roll.jpg"
+    }    
+};
+
 /* Parse the URL parameter and store the current roll type as a variable.*/
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get("roll");
 
-let displayImage = document.querySelector("#original-cinnamon-roll");
-displayImage.src="./image/" + roll[rollType].imageFile;
+/* dynamicallly update the page title*/
+let displayHeader = document.querySelector(".page-title")
+displayHeader.textContent=rollType+' cinnamon roll';
 
-
-/*dynamically display the price on the page*/
-let price = rolls[rollType].basePrice;
+/* dynamicallly update the price shown*/
+let updatedPrice = rolls[rollType].basePrice;
 let displayPrice = document.querySelector("#price");
-displayPrice.textContent="$"+price;
+displayPrice.textContent="$"+ updatedPrice;
+
+/* dynamicallly update the displayed image*/
+let displayImage = document.querySelector("#original-cinnamon-roll");
+displayImage.src="./image/" + rolls[rollType].imageFile;
+
+/*creating an instance to save all of the current product information of the class Roll. */
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+    }
+}
+
+/*Create an empty array called cart*/
+let cart = [];
+
+function addToCart(){
+    /*get the menu options*/
+    let glazeOptions = document.querySelector("#glazing-options");
+    let packOptions = document.querySelector("#size")
+
+    /*get the text by the option selected*/
+    let changeGlaze = glazeOptions.options[glazeOptions.selectedIndex].text;
+    let changeSize = packOptions.options[packOptions.selectedIndex].text
+
+    /* create a new Roll object */
+    let addItem = new Roll (rollType, changeGlaze, changeSize, updatedPrice);
+
+    /* add the new object to the empty cart*/
+    cart.push(addItem);
+
+    /*display cart*/
+    console.log(cart);
+}
+
