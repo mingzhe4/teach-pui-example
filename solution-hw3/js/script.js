@@ -1,3 +1,10 @@
+//HW3
+
+/*dynamically display the price on the page*/
+let price = 2.49;
+let displayPrice = document.querySelector("#price");
+displayPrice.textContent="$"+price;
+
 /* create arrays that will be shown on the options dropdown*/
 let showOptions = {
     arrayGlaze: ['Keep Original','Sugar milk','Vanilla Milk','Double Chocolate'],
@@ -43,7 +50,7 @@ function glazingChange(element) {
     elementGlazeValue=addPrice.addGlaze[indexGlaze];
 
     /*calculate the final price and display it on the webpage*/
-    finalPrice = ((elementSizeValue)*(2.49+(elementGlazeValue))).toFixed(2);   
+    finalPrice = ((elementSizeValue)*(price+(elementGlazeValue))).toFixed(2);   
     let showPrice = document.querySelector("#price");
     showPrice.textContent = '$'+finalPrice;
   }
