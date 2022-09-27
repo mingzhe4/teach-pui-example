@@ -1,10 +1,5 @@
 //HW3
 
-/*dynamically display the price on the page*/
-let price = 2.49;
-let displayPrice = document.querySelector("#price");
-displayPrice.textContent="$"+price;
-
 /* create arrays that will be shown on the options dropdown*/
 let showOptions = {
     arrayGlaze: ['Keep Original','Sugar milk','Vanilla Milk','Double Chocolate'],
@@ -53,9 +48,9 @@ function glazingChange(element) {
     finalPrice = ((elementSizeValue)*(price+(elementGlazeValue))).toFixed(2);   
     let showPrice = document.querySelector("#price");
     showPrice.textContent = '$'+finalPrice;
-  }
+}
 
- /*create a function that calculates the value of the final price given pack size adjustment to the hundredth decimal place, 
+/*create a function that calculates the value of the final price given pack size adjustment to the hundredth decimal place, 
 include updatePrice() function to reflect the final price on the html page */
 function sizeChange(element) {
     const priceChange = element.value;
@@ -65,18 +60,25 @@ function sizeChange(element) {
     elementSizeValue=addPrice.addSize[indexSize];
 
     /*calculate the final price and display it on the webpage*/
-    finalPrice = ((elementSizeValue)*(2.49+(elementGlazeValue))).toFixed(2);   
+    finalPrice = ((elementSizeValue)*(price+(elementGlazeValue))).toFixed(2);   
     let showPrice = document.querySelector("#price");
     showPrice.textContent = '$'+finalPrice;
-  }
+}
 
 
-  //HW4
+
+//HW4
 
 /* Parse the URL parameter and store the current roll type as a variable.*/
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const rollType = params.get("roll");
 
+let displayImage = document.querySelector("#original-cinnamon-roll");
+displayImage.src="./image/" + roll[rollType].imageFile;
 
-  
+
+/*dynamically display the price on the page*/
+let price = rolls[rollType].basePrice;
+let displayPrice = document.querySelector("#price");
+displayPrice.textContent="$"+price;

@@ -65,7 +65,7 @@ function sizeChange(element) {
     elementSizeValue=addPrice.addSize[indexSize];
 
     /*calculate the final price and display it on the webpage*/
-    finalPrice = ((elementSizeValue)*(2.49+(elementGlazeValue))).toFixed(2);   
+    finalPrice = ((elementSizeValue)*(price+(elementGlazeValue))).toFixed(2);   
     let showPrice = document.querySelector("#price");
     showPrice.textContent = '$'+finalPrice;
 }
