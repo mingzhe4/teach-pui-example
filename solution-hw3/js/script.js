@@ -53,9 +53,9 @@ function glazingChange(element) {
     finalPrice = ((elementSizeValue)*(price+(elementGlazeValue))).toFixed(2);   
     let showPrice = document.querySelector("#price");
     showPrice.textContent = '$'+finalPrice;
-  }
+}
 
- /*create a function that calculates the value of the final price given pack size adjustment to the hundredth decimal place, 
+/*create a function that calculates the value of the final price given pack size adjustment to the hundredth decimal place, 
 include updatePrice() function to reflect the final price on the html page */
 function sizeChange(element) {
     const priceChange = element.value;
@@ -68,4 +68,4 @@ function sizeChange(element) {
     finalPrice = ((elementSizeValue)*(2.49+(elementGlazeValue))).toFixed(2);   
     let showPrice = document.querySelector("#price");
     showPrice.textContent = '$'+finalPrice;
-  }
+}
