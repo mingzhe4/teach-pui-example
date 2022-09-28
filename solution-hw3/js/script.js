@@ -45,24 +45,19 @@ include updatePrice() function to reflect the final price on the html page */
 function glazingChange(element) {
     const priceChange = element.value;
 
-    /* get the index of selected element and find the respective value useing index of that array*/
-    indexGlaze = showOptions.arrayGlaze.indexOf(priceChange);
-    elementGlazeValue=addPrice.addGlaze[indexGlaze];
+    /*loop through the glazing name to find the corresponding price difference to add*/
+    for(i=0;i<showOptions.arrayGlaze.length;i++){
+        if (showOptions.arrayGlaze[i]==priceChange){
+            elementGlazeValue=addPrice.addGlaze[i];
+        }
+    }
 
-    /*calculate the final price and display it on the webpage*/
-    finalPrice = ((elementSizeValue)*(price+(elementGlazeValue))).toFixed(2);   
-    let showPrice = document.querySelector("#price");
-    showPrice.textContent = '$'+finalPrice;
-}
-
-/*create a function that calculates the value of the final price given pack size adjustment to the hundredth decimal place, 
-include updatePrice() function to reflect the final price on the html page */
-function sizeChange(element) {
-    const priceChange = element.value;
-
-    /* get the index of selected element and find the respective value useing index of that array*/
-    indexSize = showOptions.arraySize.indexOf(priceChange);
-    elementSizeValue=addPrice.addSize[indexSize];
+    /*loop through the size name to find the corresponding price difference to add*/
+    for(i=0;i<showOptions.arraySize.length;i++){
+        if (showOptions.arraySize[i]==priceChange){
+            elementSizeValue=addPrice.addSize[i];
+        }
+    }   
 
     /*calculate the final price and display it on the webpage*/
     finalPrice = ((elementSizeValue)*(price+(elementGlazeValue))).toFixed(2);   
