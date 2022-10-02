@@ -5,7 +5,7 @@ let price = 2.49;
 
 /* create arrays that will be shown on the options dropdown*/
 let showOptions = {
-    arrayGlaze: ['Keep Original','Sugar milk','Vanilla Milk','Double Chocolate'],
+    arrayGlaze: ['Keep original','Sugar milk','Vanilla milk','Double chocolate'],
     arraySize: ['1','3','6','12']
 }
 

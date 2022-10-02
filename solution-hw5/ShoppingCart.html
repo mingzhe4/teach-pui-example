@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>HW 5</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="js/rollsData.js"></script>
+    <script defer src="js/updateCart.js"></script>
   </head>
   
   <body>
@@ -24,32 +26,34 @@
     </div>
 
     <div class="shopping">
-      <template id = "shopping-cart">
-        <div class="shopping-display">
-          <div class="row-one">
-            <div class="image-texts">
-              <img class='products-shopping' src="image/original-cinnamon-roll.jpg" alt="Original cinnamon roll" />
+      <div class = "shopping-cart-list">
+        <template id = "shopping-cart">
+          <div class="shopping-display">
+            <div class="row-one">
+              <div class="image-texts">
+                <img class='products-shopping' src="image/original-cinnamon-roll.jpg" alt="Original cinnamon roll" />
 
-              <div class="three-texts">
-                <div id = 'roll-name'>Original Cinnamon Roll</div>
-                <div id = 'roll-glaze'>Glazing: Keep Original</div>
-                <div id = 'roll-size'>Pack Size: 1</div>  
+                <div class="three-texts">
+                  <div id = 'roll-name'>Original Cinnamon Roll</div>
+                  <div id = 'roll-glaze'>Glazing: Keep original</div>
+                  <div id = 'roll-size'>Pack Size: 1</div>  
+                </div>
               </div>
+      
+
+              <div id = 'prices'>
+                $2.49
+              </div>
+
             </div>
-    
 
-            <div id = 'prices'>
-              $2.49
+      
+            <div class = 'remove'>
+              <small><u>Remove</u></small>
             </div>
-
           </div>
-
-    
-          <div class = 'remove'>
-            <small><u>Remove</u></small>
-          </div>
-        </div>
-      </template>
+        </template>
+      </div>
 
 
 
