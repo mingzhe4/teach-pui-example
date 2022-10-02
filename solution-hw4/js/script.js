@@ -1,7 +1,5 @@
 //HW3
 
-/*display the price on the page*/
-let price = 2.49;
 
 /* create arrays that will be shown on the options dropdown*/
 let showOptions = {
@@ -58,7 +56,7 @@ function glazingChange(element) {
     }   
 
     /*calculate the final price and display it on the webpage*/
-    finalPrice = ((elementSizeValue)*(price+(elementGlazeValue))).toFixed(2);   
+    finalPrice = ((elementSizeValue)*(rolls[rollType].basePrice+(elementGlazeValue))).toFixed(2);   
     let showPrice = document.querySelector("#price");
     showPrice.textContent = '$'+finalPrice;
 }
