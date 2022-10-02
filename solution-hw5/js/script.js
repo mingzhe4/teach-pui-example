@@ -119,10 +119,31 @@ function addToCart(){
 }
 
 //HW 5 
+class Roll {
+    constructor(rollType, rollGlazing, packSize, basePrice) {
+        this.type = rollType;
+        this.glazing =  rollGlazing;
+        this.size = packSize;
+        this.basePrice = basePrice;
+        this.element = null;
+    }
+}
 
 const newCartSet = new Set();
 
-function createRow (){
-    const template = document.querySelecto("shopping-cart");
-    const clone = template.content.cloneRow(true);
+function addNewCart(rollType, rollGlazing, packSize, basePrice){
+    const newRoll = new Roll(rollType, rollGlazing, packSize, basePrice);
+    newCartSet.add(newRoll);
+    return newRoll;
+}
+
+for (const newRoll of newCartSet){
+    createRow(newRoll);
+}
+
+
+function createElement (newRoll){
+    const template = document.querySelector("shopping-cart");
+    const clone = template.content.cloneNode(true);
+    newRoll.element = clone.querySelector(".shopping-display");
 }
