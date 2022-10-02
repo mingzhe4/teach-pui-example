@@ -137,6 +137,11 @@ function addNewCart(rollType, rollGlazing, packSize, basePrice){
     return newRoll;
 }
 
+const originalRoll = addNewCart("Original","Sugar Milk",1,2.49);
+const walnutRoll = addNewCart("Walnut","Vanilla Milk",12,3.99);
+const raisinRoll = addNewCart("Raisin","Sugar Milk",3,2.99);
+const appleRoll = addNewCart("Apple","Keep original",3,3.49);
+
 for (const newRoll of newCartSet){
     createRow(newRoll);
 }
@@ -146,4 +151,24 @@ function createElement (newRoll){
     const template = document.querySelector("shopping-cart");
     const clone = template.content.cloneNode(true);
     newRoll.element = clone.querySelector(".shopping-display");
+
+//     const btnDelete = newRoll.element.querySelector('.remove');
+//     console.log(btnDelete);
+//     btnDelete.addEventListener('click', () => {
+//         deleteRow(newRoll);
+// }
+};
+
+function updateElement(newRoll){
+    const cartImageElement = newRoll.element.querySelector(".products-shopping");
+    const rollTypeElement = newRoll.element.querySelector("#roll-name");
+    const rollGlazingElement = newRoll.element.querySelector("#roll-glaze");
+    const packSizeElement = newRoll.element.querySelector("#roll-size");
+    const basePriceElement = newRoll.element.querySelector("#prices");
+
+    cartImageElement.src = "./image/" + rolls[rollType].imageFile;
+    rollTypeElement.innerText = newRoll.type + "cinnamon roll";
+    rollGlazingElement.innerText = "Glazing:" + newRoll.glazing;
+    packSizeElement.innerText = "Pack Size:" + newRoll.size;
+    basePriceElement.innerText = "$" + newRoll.basePrice;
 }
