@@ -22,10 +22,10 @@ function addNewCart(rollType, rollGlazing, packSize, basePrice){
 }
 
 //create some entries of new items in the cart
-const originalRoll = addNewCart("Original","Sugar milk",1,2.49);
-const walnutRoll = addNewCart("Walnut","Vanilla milk",12,3.49);
-const raisinRoll = addNewCart("Raisin","Sugar milk",3,2.99);
-const appleRoll = addNewCart("Apple","Keep original",3,3.49);
+const originalRoll = addNewCart("Original","Sugar milk",1,rolls["Original"].basePrice);
+const walnutRoll = addNewCart("Walnut","Vanilla milk",12,rolls["Walnut"].basePrice);
+const raisinRoll = addNewCart("Raisin","Sugar milk",3,rolls["Raisin"].basePrice);
+const appleRoll = addNewCart("Apple","Keep original",3,rolls["Apple"].basePrice);
 
 //account for the price adjustment for different glazing and size options
 const glazeChange = {'Keep original':0,"Sugar milk":0,"Vanilla milk":0.5,"Double Chocolate":1.5};
