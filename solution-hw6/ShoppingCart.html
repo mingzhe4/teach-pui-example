@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>HW 6</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="js/rollsData.js"></script>
+    <script defer src="js/updateCart.js"></script>
+  </head>
+  
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <a href="index.html">
+          <img class="logo" src="image/logo-01.svg" alt="Bun Bun Bake Shop logo"/>
+        </a>
+      </div>
+      <div class="header-right">
+        <div class="header-nav">
+          <p class ="products-title-blank"><a href="index.html">PRODUCTS</a></p>
+          <p class = 'cart'><a href="ShoppingCart.html"><b>CART</b></a></p>
+        </div>
+        <hr>
+        <p class="page-title">Shopping Cart</p>
+      </div>
+    </div>
+
+    <div class="shopping">
+      <div class = "shopping-cart-list">
+        <template id = "shopping-cart">
+          <div class="shopping-display">
+            <div class="row-one">
+              <div class="image-texts">
+                <img class='products-shopping' src="image/original-cinnamon-roll.jpg" alt="Original cinnamon roll" />
+
+                <div class="three-texts">
+                  <div id = 'roll-name'>Original Cinnamon Roll</div>
+                  <div id = 'roll-glaze'>Glazing: Keep original</div>
+                  <div id = 'roll-size'>Pack Size: 1</div>  
+                </div>
+              </div>
+      
+
+              <div id = 'prices'>
+                $2.49
+              </div>
+
+            </div>
+
+      
+            <div class = 'remove'>
+              <small><u>Remove</u></small>
+            </div>
+          </div>
+        </template>
+      </div>
+
+
+
+ 
+
+
+      <hr>
+      <div class="final">
+        <div>Total: </div>
+        <div id = "final-price">$29.94</div> 
+      </div>
+
+
+      <div class="checkout">
+        <a href="ShoppingCart.html">Checkout</a>
+      </div>
+
+    </div>
+ 
+
+
+  </body>
+</html>
