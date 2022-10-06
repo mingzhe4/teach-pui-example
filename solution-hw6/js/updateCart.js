@@ -21,20 +21,20 @@ function addNewCart(rollType, rollGlazing, packSize, basePrice){
     return newRoll;
 }
 
-//create some entries of new items in the cart
-const originalRoll = addNewCart("Original","Sugar milk",1,rolls["Original"].basePrice);
-const walnutRoll = addNewCart("Walnut","Vanilla milk",12,rolls["Walnut"].basePrice);
-const raisinRoll = addNewCart("Raisin","Sugar milk",3,rolls["Raisin"].basePrice);
-const appleRoll = addNewCart("Apple","Keep original",3,rolls["Apple"].basePrice);
+// //create some entries of new items in the cart
+// const originalRoll = addNewCart("Original","Sugar milk",1,rolls["Original"].basePrice);
+// const walnutRoll = addNewCart("Walnut","Vanilla milk",12,rolls["Walnut"].basePrice);
+// const raisinRoll = addNewCart("Raisin","Sugar milk",3,rolls["Raisin"].basePrice);
+// const appleRoll = addNewCart("Apple","Keep original",3,rolls["Apple"].basePrice);
 
 //account for the price adjustment for different glazing and size options
 const glazeChange = {'Keep original':0,"Sugar milk":0,"Vanilla milk":0.5,"Double Chocolate":1.5};
 const sizeChange = {"1":1,"3":3,"6":5,"12":10};
 
-//create a for loop that iterate through the newCartSet
-for (const newRoll of newCartSet){
-    createElement(newRoll);
-}
+// //create a for loop that iterate through the newCartSet
+// for (const newRoll of newCartSet){
+//     createElement(newRoll);
+// }
 
 //create a function that create new elements
 function createElement (newRoll){
@@ -66,6 +66,8 @@ function createElement (newRoll){
 
     //display the updated final price
     updateFinalPrice();
+
+    saveToLocalStorage();
 }
 
 //create a function that updates the elements
@@ -92,6 +94,7 @@ function updateElement(newRoll){
 function deleteElement(newRoll){
     newRoll.element.remove();
     newCartSet.delete(newRoll);
+    saveToLocalStorage();
 }
 
 //create a function that calculates and displays the final total price dynamically
@@ -104,3 +107,23 @@ function updateFinalPrice(){
     }
     finalPrice.innerText = "$" + Number(totalPrice).toFixed(2);
 };
+
+function saveToLocalStorage(){
+    const shoppingCartArray = Array.from(newCartSet);
+    const shoppingCartArrayString = JSON.stringify(shoppingCartArray);
+    localStorage.setItem("storedItems", shoppingCartArrayString);
+}
+
+
+function retrieveFromLocalStorage(){
+    const shoppingCartArrayString = localStorage.getItem("storedItems");
+    const shoppingCartArray = JSON.parse(shoppingCartArrayString);
+    for (const cartData of shoppingCartArray){
+        const newRoll = addNewCart(cartData.type, cartData.glazing, cartData.size, cartData.basePrice);
+        createElement(newRoll);
+    }
+}
+
+if (localStorage.getItem("storedItems") != null){
+    retrieveFromLocalStorage();
+}
