@@ -31,10 +31,10 @@ function addNewCart(rollType, rollGlazing, packSize, basePrice){
 const glazeChange = {'Keep original':0,"Sugar milk":0,"Vanilla milk":0.5,"Double Chocolate":1.5};
 const sizeChange = {"1":1,"3":3,"6":5,"12":10};
 
-//create a for loop that iterate through the newCartSet
-for (const newRoll of newCartSet){
-    createElement(newRoll);
-}
+// //create a for loop that iterate through the newCartSet
+// for (const newRoll of newCartSet){
+//     createElement(newRoll);
+// }
 
 //create a function that create new elements
 function createElement (newRoll){
