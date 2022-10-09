@@ -66,8 +66,6 @@ function createElement (newRoll){
 
     //display the updated final price
     updateFinalPrice();
-
-    saveToLocalStorage();
 }
 
 //create a function that updates the elements
@@ -94,7 +92,6 @@ function updateElement(newRoll){
 function deleteElement(newRoll){
     newRoll.element.remove();
     newCartSet.delete(newRoll);
-    saveToLocalStorage();
 }
 
 //create a function that calculates and displays the final total price dynamically
@@ -107,23 +104,3 @@ function updateFinalPrice(){
     }
     finalPrice.innerText = "$" + Number(totalPrice).toFixed(2);
 };
-
-function saveToLocalStorage(){
-    const shoppingCartArray = Array.from(newCartSet);
-    const shoppingCartArrayString = JSON.stringify(shoppingCartArray);
-    localStorage.setItem("storedItems", shoppingCartArrayString);
-}
-
-
-function retrieveFromLocalStorage(){
-    const shoppingCartArrayString = localStorage.getItem("storedItems");
-    const shoppingCartArray = JSON.parse(shoppingCartArrayString);
-    for (const cartData of shoppingCartArray){
-        const newRoll = addNewCart(cartData.type, cartData.glazing, cartData.size, cartData.basePrice);
-        createElement(newRoll);
-    }
-}
-
-if (localStorage.getItem("storedItems") != null){
-    retrieveFromLocalStorage();
-}

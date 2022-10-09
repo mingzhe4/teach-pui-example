@@ -94,6 +94,10 @@ class Roll {
     }
 }
 
+
+
+
+// HW6 
 /*Create an empty array called cart*/
 let cart = [];
 
@@ -114,5 +118,26 @@ function addToCart(){
 
     /*display cart*/
     console.log(cart);
+
+    saveToLocalStorage();
 }
 
+function saveToLocalStorage(){
+    const shoppingCartArray = Array.from(newCartSet);
+    const shoppingCartArrayString = JSON.stringify(shoppingCartArray);
+    localStorage.setItem("storedItems", shoppingCartArrayString);
+}
+
+
+function retrieveFromLocalStorage(){
+    const shoppingCartArrayString = localStorage.getItem("storedItems");
+    const shoppingCartArray = JSON.parse(shoppingCartArrayString);
+    for (const cartData of shoppingCartArray){
+        const newRoll = addNewCart(cartData.type, cartData.glazing, cartData.size, cartData.basePrice);
+        createElement(newRoll);
+    }
+}
+
+if (localStorage.getItem("storedItems") != null){
+    retrieveFromLocalStorage();
+}
