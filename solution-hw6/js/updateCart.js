@@ -1,4 +1,3 @@
-//HW 5 
 
 //create a class called Roll
 class Roll {
@@ -68,6 +67,7 @@ function createElement (newRoll){
     updateFinalPrice();
 }
 
+
 //create a function that updates the elements
 function updateElement(newRoll){
     //get the elements from the DOM
@@ -88,10 +88,28 @@ function updateElement(newRoll){
     eachPriceElement.innerText = "$" + eachPriceValue;;
 }
 
+
+//retrieve from local storage and create element
+const shoppingCartArrayString = localStorage.getItem("storedItems");
+const shoppingCartArray = JSON.parse(shoppingCartArrayString);
+for (const cartData of shoppingCartArray){
+    const newRoll = addNewCart(cartData.type, cartData.glazing, cartData.size, cartData.basePrice);
+    createElement(newRoll);
+}
+
+
 //create a function that removes the appropriate element from the DOM
 function deleteElement(newRoll){
     newRoll.element.remove();
     newCartSet.delete(newRoll);
+    
+    for(let i = 0;i<shoppingCartArray.length;i++){
+        if(shoppingCartArray[i]===newRoll){
+            shoppingCartArray.splice(i,1);
+        }
+    }
+    const shoppingCartArrayString = JSON.stringify(Array.from(newCartSet));
+    localStorage.setItem("storedItems", shoppingCartArrayString);
 }
 
 //create a function that calculates and displays the final total price dynamically

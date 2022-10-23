@@ -101,6 +101,19 @@ class Roll {
 /*Create an empty array called cart*/
 let cart = [];
 
+//create a function to save to local storage
+function saveToLocalStorage(){
+    const shoppingCartArrayString = JSON.stringify(cart);
+    localStorage.setItem("storedItems", shoppingCartArrayString);
+}
+
+//create a function to retrieve from local storage
+function retrieveFromLocalStorage(){
+    const shoppingCartArrayString = localStorage.getItem("storedItems");
+    const shoppingCartArray = JSON.parse(shoppingCartArrayString);
+    cart = shoppingCartArray;
+}
+
 function addToCart(){
     /*get the menu options*/
     let glazeOptions = document.querySelector("#glazing-options");
@@ -119,25 +132,11 @@ function addToCart(){
     /*display cart*/
     console.log(cart);
 
+    //retrieve from local storage, add new item, and save to local storage
+    retrieveFromLocalStorage();
+    cart.push(addItem);
     saveToLocalStorage();
 }
 
-function saveToLocalStorage(){
-    const shoppingCartArray = Array.from(newCartSet);
-    const shoppingCartArrayString = JSON.stringify(shoppingCartArray);
-    localStorage.setItem("storedItems", shoppingCartArrayString);
-}
 
 
-function retrieveFromLocalStorage(){
-    const shoppingCartArrayString = localStorage.getItem("storedItems");
-    const shoppingCartArray = JSON.parse(shoppingCartArrayString);
-    for (const cartData of shoppingCartArray){
-        const newRoll = addNewCart(cartData.type, cartData.glazing, cartData.size, cartData.basePrice);
-        createElement(newRoll);
-    }
-}
-
-if (localStorage.getItem("storedItems") != null){
-    retrieveFromLocalStorage();
-}
